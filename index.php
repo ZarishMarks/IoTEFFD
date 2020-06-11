@@ -39,12 +39,12 @@
         $avargeCarbon = $avargeCarbon + $row[3];
         $avargeGas = $avargeGas + $row[4];
       }
-	  /* average temperature of the devices we have $deviceTemperature / number of devices */
+	  /* average temperature of the devices we have $deviceTemperature / number of devices */ 
         try{
-          $avargeTemperature = $avargeTemperature / 10;
-          $avargeHumidity = $avargeHumidity / 10;
-          $avargeCarbon = $avargeCarbon / 10;
-          $avargeGas = $avargeGas / 10;
+          $avargeTemperature = $avargeTemperature / 100;
+          $avargeHumidity = $avargeHumidity / 100;
+          $avargeCarbon = $avargeCarbon / 100;
+          $avargeGas = $avargeGas / 100;
 
           $url = "https://api.thingspeak.com/update?api_key=WJMGEZPQKPG8Y2PZ&field1=$avargeTemperature&field2=$avargeHumidity&field3=$avargeCarbon&field4=$avargeGas";
           $response = file_get_contents($url);
