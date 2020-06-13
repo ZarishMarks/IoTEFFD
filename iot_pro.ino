@@ -146,7 +146,7 @@ void loop()
   Serial.println(str);
   gprsSerial.println(str);//begin send data to remote server
   
-  String local_link="GET localhost/Zarish_Final/Zarish_Final/db_insert.php?field1=" + String(t) +"&field2="+String(h) +"&field3="+String(sensorValue) + "&field4="+String(gas_value)+ "&field5="+String(smokeSignal)+ "&field6="+String(lat)+ "&field7="+String(longi);
+  String local_link="GET localhost/Zarish_Final/monitoring.php?field1=" + String(t) +"&field2="+String(h) +"&field3="+String(sensorValue) + "&field4="+String(gas_value)+ "&field5="+String(smokeSignal)+ "&field6="+String(lat)+ "&field7="+String(longi);
   Serial.println(local_link); //database
 
   
